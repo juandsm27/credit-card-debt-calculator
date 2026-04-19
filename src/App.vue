@@ -949,152 +949,163 @@ export default {
 }
 </script>
 <style>
+  :root {
+    --bg: #08080e;
+    --bg2: #0f0f18;
+    --bg3: #14141e;
+    --border: rgba(255,255,255,0.07);
+    --border-bright: rgba(255,255,255,0.15);
+    --text: #eeeef6;
+    --muted: #6b6b80;
+    --accent: #7c6af7;
+    --accent2: #4ed8c0;
+    --accent3: #f06fba;
+  }
+
+  body { background: var(--bg) !important; }
+
+  .v-application { background: var(--bg) !important; font-family: 'Syne', sans-serif !important; }
+
   input {
-    font-family: 'Barlow' !important;
-    background-color: #fff !important;
-    color: #666 !important;
+    font-family: 'Syne', sans-serif !important;
+    color: var(--text) !important;
+    background-color: transparent !important;
   }
-  .v-select .v-select__selection-text {
-    font-family: 'Barlow';
-  }
-  .readonly .v-field__input {   
-    background-color: #f8f8f8 !important;
-  }
-  .readonly input {   
-    background-color: #f8f8f8 !important;
-    display: none !important;
-  }
-  .tabtext {
-    color: rgb(181, 73, 20);    
-    margin-top: 50px;
-  }
-  .monthly-payment-line {
-    width: 40px;
-    border-width: 2px !important;
-    margin-bottom: 5px !important;
-    background-color: rgb(182, 71, 12);
-    border-color: rgb(182, 71, 12);
-    opacity: initial !important;
-    margin-top: 20px;
-  }
-  .monthly-payment-line-title {
-    width: 40px;
-    border-width: 2px !important;
-    margin-bottom: 25px !important;
-    background-color: rgb(182, 71, 12) !important;
-    border-color: rgb(182, 71, 12) !important;
-    opacity: initial !important;
-    margin-top: 20px !important;
-  }
-  .monthly-payment-title {
-    text-transform: uppercase !important;
-    font-weight: bold;
-    color: rgb(182, 71, 12) !important;
-    font-size: 18px;
-    margin-bottom: 20px !important;
-  }
-  .titlepie {
-    text-transform: uppercase !important;
-    margin-bottom: -20px;
-    font-family: "Barlow", !important;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2rem;
-    color: #666 !important;
-    padding: 0px !important;
-  }
-  .titlecard {
-    text-transform: uppercase !important;
-    margin-bottom: -20px;
-    font-family: "Barlow", !important;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2rem;
-    color: #666 !important;
-    padding: 0px !important;
-  }
+
+  .v-select .v-select__selection-text { font-family: 'Syne', sans-serif !important; color: var(--text) !important; }
+
   .monthly-payment-mount {
-    font-family: "Barlow", !important;
-    font-weight: 700 !important;
-    font-size: 40px;
-    color: #666 !important;
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 2rem !important;
+    color: var(--text) !important;
+    line-height: 1.1 !important;
   }
-  .calculator-investment{
-  line-height: 0.5em;
+
+  .monthly-payment-title {
+    font-family: 'Space Mono', monospace !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    color: var(--muted) !important;
+    margin-bottom: 1rem !important;
+    margin-top: 4px !important;
   }
-  .chartWrapper {
-  width: 100%;
-  height: 500px;
+
+  .monthly-payment-line {
+    width: 32px !important;
+    border-width: 2px !important;
+    margin-bottom: 6px !important;
+    margin-top: 12px !important;
+    background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+    border-color: transparent !important;
+    opacity: 1 !important;
   }
-  .v-table table tr:hover {
-  background-color: #999 !important;
-  color: #fff !important;
-  }
-  .v-container {
-    max-width: 100% !important;
-    margin: auto !important;
-    padding: auto !important;
-  }
-  .v-tooltip span{
-    font-size: 17px;
-  }
-  .col-style {
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-  }
-  .v-tab__slider {
-    height: 6px !important;
-  }
-  .v-field__input {
-    max-height: 44px !important;
-  }
-  .boton {
-    width: 50% !important; 
-    margin:auto;
-    background-color: rgb(182, 71, 12) !important;
-    color: white !important;
-    box-shadow: none !important;
-  }  
-  .boton:hover {
-    background-color: #f1f1f1 !important;
-    color: rgb(182, 71, 12) !important;
-  }
-  .boton2 {
-    background-color: #f1f1f1 !important;
-    color: rgb(182, 71, 12) !important;
-    box-shadow: none !important;
-  }  
-  .botongroup {
-    display: flex;
-    justify-content: center;
-  }
-  .boton2:hover {
-    background-color: rgb(182, 71, 12) !important;
-    color: white !important;
-  }
-  .divisor {
-    width: 40px;
+
+  .monthly-payment-line-title {
+    width: 32px !important;
     border-width: 2px !important;
     margin-bottom: 20px !important;
-    background-color: rgb(182, 71, 12);
-    border-color: rgb(182, 71, 12);
-    opacity: initial !important;
+    margin-top: 8px !important;
+    background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+    border-color: transparent !important;
+    opacity: 1 !important;
   }
-  .pegajoso {
-    position: sticky !important;
-    top: 45px !important;
+
+  .titlepie, .titlecard {
+    font-family: 'Raleway', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    font-size: 12px !important;
+    letter-spacing: 0.18em !important;
+    color: var(--muted) !important;
+    margin-bottom: -20px !important;
   }
-  .smol {
-    width: 24% !important; 
-    margin: auto !important;
+
+  .v-card { background: var(--bg2) !important; border: 1px solid var(--border) !important; box-shadow: none !important; }
+
+  .v-tabs { background: var(--bg3) !important; border-bottom: 1px solid var(--border) !important; }
+
+  .v-tab {
+    font-family: 'Space Mono', monospace !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--muted) !important;
   }
-  .botones {
-    margin-top: 30px;
+
+  .v-tab--selected { color: var(--accent2) !important; }
+
+  .v-tab__slider {
+    background: linear-gradient(90deg, var(--accent), var(--accent2)) !important;
+    height: 2px !important;
+  }
+
+  .v-table { background: var(--bg2) !important; color: var(--text) !important; }
+
+  .v-table thead tr th {
+    font-family: 'Space Mono', monospace !important;
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    color: var(--muted) !important;
+    background: var(--bg3) !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  .v-table tbody tr td {
+    font-family: 'Syne', sans-serif !important;
+    font-size: 13px !important;
+    color: var(--text) !important;
+    border-bottom: 1px solid var(--border) !important;
+  }
+
+  .v-table tbody tr:hover td { background: rgba(124,106,247,0.08) !important; }
+
+  .v-table table tr:hover { background-color: rgba(124,106,247,0.08) !important; color: var(--text) !important; }
+
+  .boton {
+    width: 50% !important;
+    margin: auto;
+    background: linear-gradient(135deg, var(--accent), var(--accent2)) !important;
+    color: white !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    box-shadow: none !important;
+    border-radius: 6px !important;
+  }
+
+  .boton:hover { opacity: 0.85; }
+
+  .boton2 {
+    background: var(--bg3) !important;
+    color: var(--accent2) !important;
+    border: 1px solid var(--border-bright) !important;
     box-shadow: none !important;
   }
-  .v-table--density-default > .v-table__wrapper > table > tbody > tr > td, .v-table--density-default > .v-table__wrapper > table > thead > tr > td, .v-table--density-default > .v-table__wrapper > table > tfoot > tr > td {
+
+  .boton2:hover { background: var(--accent) !important; color: white !important; }
+
+  .botongroup { display: flex; justify-content: center; }
+
+  .pegajoso { position: sticky !important; top: 45px !important; }
+
+  .smol { width: 24% !important; margin: auto !important; }
+
+  .botones { margin-top: 30px; }
+
+  .calculator-investment { line-height: 0.5em; }
+
+  .col-style { padding-bottom: 0 !important; padding-top: 0 !important; }
+
+  .v-field__input { max-height: 44px !important; }
+
+  .v-table--density-default > .v-table__wrapper > table > tbody > tr > td,
+  .v-table--density-default > .v-table__wrapper > table > thead > tr > td,
+  .v-table--density-default > .v-table__wrapper > table > tfoot > tr > td {
     height: 40px !important;
   }
 </style>
