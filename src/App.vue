@@ -2,6 +2,12 @@
   <v-main>
     <v-container class="mt-16">
 
+  <v-row class="mb-6">
+    <v-col cols="12">
+      <h1 class="calculator-title">Credit Card Debt Calculator</h1>
+    </v-col>
+  </v-row>
+
   <v-row>
     <v-alert
       color="error"
@@ -1100,6 +1106,14 @@ export default {
   .pegajoso { position: sticky !important; top: 45px !important; }
 
   .smol { width: 24% !important; margin: auto !important; }
+
+  .calculator-title {
+    font-family: 'Raleway', sans-serif !important;
+    font-weight: 800 !important;
+    font-size: 2rem !important;
+    color: var(--text) !important;
+    letter-spacing: 0.02em !important;
+  }
 
   .botones { margin-top: 30px; }
 
