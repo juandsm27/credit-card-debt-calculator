@@ -67,7 +67,10 @@
           <h1 class="monthly-payment-title">Intereses</h1>
         </v-col>
         <v-col cols="12" class="calculator-investment">
-          <div class="monthly-payment-mount">{{ formattedNumber(Math.floor(this.anosShow)) }} {{ 'Años y ' }}{{ formattedNumber(this.mesesTotal) }} {{ 'Meses' }}</div>
+          <div class="monthly-payment-mount">
+            <template v-if="anosShow > 0">{{ formattedNumber(anosShow) }} {{ anosShow === 1 ? 'Año' : 'Años' }} {{ mesesTotal > 0 ? 'y ' + formattedNumber(mesesTotal) + ' Meses' : '' }}</template>
+            <template v-else>{{ formattedNumber(mesesTotal) }} {{ mesesTotal === 1 ? 'Mes' : 'Meses' }}</template>
+          </div>
           <v-divider class="monthly-payment-line"></v-divider>
           <h1 class="monthly-payment-title">Tiempo Total a pagar</h1>
         </v-col>
@@ -881,71 +884,20 @@ export default {
           this.validationError = true;
         }
     }
-    if ( this.plazo > this.plazo0 && this.plazo > this.plazo1 && this.plazo > this.plazo2 && this.plazo > this.plazo3 && this.plazo > this.plazo4 && this.plazo > this.plazo5 && this.plazo > this.plazo6 && this.plazo > this.plazo7 && this.plazo > this.plazo8 && this.plazo > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes;
-      this.anosShow = this.plazo;
-      this.mesesTotal = this.mesesShow;
-    } 
-    // 0
-    if ( this.plazo0 > this.plazo && this.plazo0 > this.plazo1 && this.plazo0 > this.plazo2 && this.plazo0 > this.plazo3 && this.plazo0 > this.plazo4 && this.plazo0 > this.plazo5 && this.plazo0 > this.plazo6 && this.plazo0 > this.plazo7 && this.plazo0 > this.plazo8 && this.plazo0 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes0;
-      this.anosShow = this.plazo0;
-      this.mesesTotal = this.mesesShow;
-    } 
-    // 1
-    if ( this.plazo1 > this.plazo && this.plazo1 > this.plazo0 && this.plazo1 > this.plazo2 && this.plazo1 > this.plazo3 && this.plazo1 > this.plazo4 && this.plazo1 > this.plazo5 && this.plazo1 > this.plazo6 && this.plazo1 > this.plazo7 && this.plazo1 > this.plazo8 && this.plazo1 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes1;
-      this.anosShow = this.plazo1;
-      this.mesesTotal = this.mesesShow;
-    } 
-    // 2
-    if ( this.plazo2 > this.plazo && this.plazo2 > this.plazo0 && this.plazo2 > this.plazo1 && this.plazo2 > this.plazo3 && this.plazo2 > this.plazo4 && this.plazo2 > this.plazo5 && this.plazo2 > this.plazo6 && this.plazo2 > this.plazo7 && this.plazo2 > this.plazo8 && this.plazo2 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes2;
-      this.anosShow = this.plazo2;
-      this.mesesTotal = this.mesesShow;
-    } 
-    //3
-    if ( this.plazo3 > this.plazo0 && this.plazo3 > this.plazo1 && this.plazo3 > this.plazo2 && this.plazo3 > this.plazo && this.plazo3 > this.plazo4 && this.plazo3 > this.plazo5 && this.plazo3 > this.plazo6 && this.plazo3 > this.plazo7 && this.plazo3 > this.plazo8 && this.plazo3 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes3;
-      this.anosShow = this.plazo3;
-      this.mesesTotal = this.mesesShow;
-    } 
-    //4
-    if ( this.plazo4 > this.plazo0 && this.plazo4 > this.plazo1 && this.plazo4 > this.plazo2 && this.plazo4 > this.plazo3 && this.plazo4 > this.plazo && this.plazo4 > this.plazo5 && this.plazo4 > this.plazo6 && this.plazo4 > this.plazo7 && this.plazo4 > this.plazo8 && this.plazo4 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes4;
-      this.anosShow = this.plazo4;
-      this.mesesTotal = this.mesesShow;
-    } 
-    //5
-    if ( this.plazo5 > this.plazo0 && this.plazo5 > this.plazo1 && this.plazo5 > this.plazo2 && this.plazo5 > this.plazo3 && this.plazo5 > this.plazo4 && this.plazo5 > this.plazo && this.plazo5 > this.plazo6 && this.plazo5 > this.plazo7 && this.plazo5 > this.plazo8 && this.plazo5 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes5;
-      this.anosShow = this.plazo5;
-      this.mesesTotal = this.mesesShow;
-    } 
-    //6
-    if ( this.plazo6 > this.plazo0 && this.plazo6 > this.plazo1 && this.plazo6 > this.plazo2 && this.plazo6 > this.plazo3 && this.plazo6 > this.plazo4 && this.plazo6 > this.plazo5 && this.plazo6 > this.plazo && this.plazo6 > this.plazo7 && this.plazo6 > this.plazo8 && this.plazo6 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes6;
-      this.anosShow = this.plazo6;
-      this.mesesTotal = this.mesesShow;
-    }
-    //7
-    if ( this.plazo7 > this.plazo0 && this.plazo7 > this.plazo1 && this.plazo7 > this.plazo2 && this.plazo7 > this.plazo3 && this.plazo7 > this.plazo4 && this.plazo7 > this.plazo5 && this.plazo7 > this.plazo6 && this.plazo7 > this.plazo && this.plazo7 > this.plazo8 && this.plazo7 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes7;
-      this.anosShow = this.plazo7;
-      this.mesesTotal = this.mesesShow;
-    } 
-    //8
-    if ( this.plazo8 > this.plazo0 && this.plazo8 > this.plazo1 && this.plazo8 > this.plazo2 && this.plazo8 > this.plazo3 && this.plazo8 > this.plazo4 && this.plazo8 > this.plazo5 && this.plazo8 > this.plazo6 && this.plazo8 > this.plazo7 && this.plazo8 > this.plazo && this.plazo8 > this.plazo9 ) {
-      this.mesesShow = this.mesesRestantes8;
-      this.anosShow = this.plazo8;
-      this.mesesTotal = this.mesesShow;
-    } 
-    //9
-    if ( this.plazo9 > this.plazo0 && this.plazo9 > this.plazo1 && this.plazo9 > this.plazo2 && this.plazo9 > this.plazo3 && this.plazo9 > this.plazo4 && this.plazo9 > this.plazo5 && this.plazo9 > this.plazo6 && this.plazo9 > this.plazo7 && this.plazo9 > this.plazo8 && this.plazo9 > this.plazo ) {
-      this.mesesShow = this.mesesRestantes9;
-      this.anosShow = this.plazo9;
-      this.mesesTotal = this.mesesShow;
-    }
+    const allMonths = [this.tablaMensual.length];
+    if (this.tablaMensual0) allMonths.push(this.tablaMensual0.length);
+    if (this.tablaMensual1) allMonths.push(this.tablaMensual1.length);
+    if (this.tablaMensual2) allMonths.push(this.tablaMensual2.length);
+    if (this.tablaMensual3) allMonths.push(this.tablaMensual3.length);
+    if (this.tablaMensual4) allMonths.push(this.tablaMensual4.length);
+    if (this.tablaMensual5) allMonths.push(this.tablaMensual5.length);
+    if (this.tablaMensual6) allMonths.push(this.tablaMensual6.length);
+    if (this.tablaMensual7) allMonths.push(this.tablaMensual7.length);
+    if (this.tablaMensual8) allMonths.push(this.tablaMensual8.length);
+    if (this.tablaMensual9) allMonths.push(this.tablaMensual9.length);
+    const maxMonths = Math.max(...allMonths);
+    this.anosShow = Math.floor(maxMonths / 12);
+    this.mesesTotal = maxMonths % 12;
 
     // this.mesesShow = this.mesesRestantes + this.mesesRestantes0 + this.mesesRestantes1 + this.mesesRestantes2 + this.mesesRestantes3 + this.mesesRestantes4 + this.mesesRestantes5 + this.mesesRestantes6 + this.mesesRestantes7 + this.mesesRestantes8 + this.mesesRestantes9;
     // this.anosAd = this.mesesShow/12;
