@@ -1,6 +1,9 @@
-<template>
+<template><v-app>
+  <v-main>
+    <v-container class="mt-16">
+
   <v-row>
-    <v-alert            
+    <v-alert
       color="error"
       icon="$error"
       title="Pago Insuficiente"
@@ -352,8 +355,11 @@
         </v-card-text>
       </v-card>
     </v-col>
-  </v-row>       
-</template>
+  </v-row>
+
+    </v-container>
+  </v-main>
+</v-app></template>
 
 <script>
 export default {
