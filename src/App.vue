@@ -895,9 +895,9 @@ export default {
     if (this.tablaMensual7) allMonths.push(this.tablaMensual7.length);
     if (this.tablaMensual8) allMonths.push(this.tablaMensual8.length);
     if (this.tablaMensual9) allMonths.push(this.tablaMensual9.length);
-    const maxMonths = Math.max(...allMonths);
-    this.anosShow = Math.floor(maxMonths / 12);
-    this.mesesTotal = maxMonths % 12;
+    const totalMonths = allMonths.reduce((a, b) => a + b, 0);
+    this.anosShow = Math.floor(totalMonths / 12);
+    this.mesesTotal = totalMonths % 12;
 
     // this.mesesShow = this.mesesRestantes + this.mesesRestantes0 + this.mesesRestantes1 + this.mesesRestantes2 + this.mesesRestantes3 + this.mesesRestantes4 + this.mesesRestantes5 + this.mesesRestantes6 + this.mesesRestantes7 + this.mesesRestantes8 + this.mesesRestantes9;
     // this.anosAd = this.mesesShow/12;
