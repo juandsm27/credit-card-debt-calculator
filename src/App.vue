@@ -502,7 +502,7 @@ export default {
       let saldoTotal = this.saldoInicial - principal;
       this.tablaMensual = [];
       this.tablaMensual.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.tasaInicial/12)/100;
         principal = this.pagoInicial - interes;
         principalTotal = principal + principalTotal;
@@ -533,7 +533,7 @@ export default {
         let saldoTotal = this.inputValues3[0] - principal;
         this.tablaMensual0 = [];
         this.tablaMensual0.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-        for (let index = 2; index <= saldoTotal; index++) {
+        for (let index = 2; saldoTotal > 0; index++) {
           interes = (saldoTotal*this.inputValues2[0]/12)/100;
           principal = this.inputValues[0] - interes;
           principalTotal = principal + principalTotal;
@@ -569,7 +569,7 @@ export default {
       let saldoTotal = this.inputValues3[1] - principal;
       this.tablaMensual1 = [];
       this.tablaMensual1.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[1]/12)/100;
         principal = this.inputValues[1] - interes;
         principalTotal = principal + principalTotal;
@@ -605,7 +605,7 @@ export default {
       let saldoTotal = this.inputValues3[2] - principal;
       this.tablaMensual2 = [];
       this.tablaMensual2.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[2]/12)/100;
         principal = this.inputValues[2] - interes;
         principalTotal = principal + principalTotal;
@@ -641,7 +641,7 @@ export default {
       let saldoTotal = this.inputValues3[3] - principal;
       this.tablaMensual3 = [];
       this.tablaMensual3.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[3]/12)/100;
         principal = this.inputValues[3] - interes;
         principalTotal = principal + principalTotal;
@@ -677,7 +677,7 @@ export default {
       let saldoTotal = this.inputValues3[4] - principal;
       this.tablaMensual4 = [];
       this.tablaMensual4.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[4]/12)/100;
         principal = this.inputValues[4] - interes;
         principalTotal = principal + principalTotal;
@@ -713,7 +713,7 @@ export default {
       let saldoTotal = this.inputValues3[5] - principal;
       this.tablaMensual5 = [];
       this.tablaMensual5.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[5]/12)/100;
         principal = this.inputValues[5] - interes;
         principalTotal = principal + principalTotal;
@@ -749,7 +749,7 @@ export default {
       let saldoTotal = this.inputValues3[6] - principal;
       this.tablaMensual6 = [];
       this.tablaMensual6.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[6]/12)/100;
         principal = this.inputValues[6] - interes;
         principalTotal = principal + principalTotal;
@@ -785,7 +785,7 @@ export default {
       let saldoTotal = this.inputValues3[7] - principal;
       this.tablaMensual7 = [];
       this.tablaMensual7.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[7]/12)/100;
         principal = this.inputValues[7] - interes;
         principalTotal = principal + principalTotal;
@@ -821,7 +821,7 @@ export default {
       let saldoTotal = this.inputValues3[8] - principal;
       this.tablaMensual8 = [];
       this.tablaMensual8.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[8]/12)/100;
         principal = this.inputValues[8] - interes;
         principalTotal = principal + principalTotal;
@@ -857,7 +857,7 @@ export default {
       let saldoTotal = this.inputValues3[9] - principal;
       this.tablaMensual9 = [];
       this.tablaMensual9.push({ mes: 1, principal_tabla: principal.toFixed(2), principal_tabla_total: principalTotal.toFixed(2), interes_tabla: interes.toFixed(2), interes_tabla_total: interesTotal.toFixed(2), saldo_tabla: saldoTotal.toFixed(2) });
-      for (let index = 2; index <= saldoTotal; index++) {
+      for (let index = 2; saldoTotal > 0; index++) {
         interes = (saldoTotal*this.inputValues2[9]/12)/100;
         principal = this.inputValues[9] - interes;
         principalTotal = principal + principalTotal;
