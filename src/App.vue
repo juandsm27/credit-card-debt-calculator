@@ -2,6 +2,11 @@
   <v-main>
     <v-container class="mt-16">
 
+  <v-row class="mb-2">
+    <v-col cols="12">
+      <v-btn href="https://juandsm27.github.io/portfolio/#tools" variant="text" prepend-icon="mdi-arrow-left" class="back-btn">Portfolio</v-btn>
+    </v-col>
+  </v-row>
   <v-row class="mb-6">
     <v-col cols="12">
       <h1 class="calculator-title">Credit Card Debt Calculator</h1>
@@ -1079,5 +1084,14 @@ export default {
   .v-table--density-default > .v-table__wrapper > table > thead > tr > td,
   .v-table--density-default > .v-table__wrapper > table > tfoot > tr > td {
     height: 40px !important;
+  }
+
+  .back-btn {
+    color: var(--accent2) !important;
+    font-family: 'Space Mono', monospace !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    padding-left: 0 !important;
   }
 </style>
